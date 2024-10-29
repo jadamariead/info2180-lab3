@@ -10,6 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentPlayer = "X";
 
   squares.forEach((square, index) => {
+    square.addEventListener("mouseover",() =>{
+      square.classList.add("hover");
+    });
+
+    square.addEventListener("mouseout",() =>{
+      square.classList.remove("hover");
+    });
+
     square.addEventListener("click", () => {
 
       if (state[index] == null ) {
